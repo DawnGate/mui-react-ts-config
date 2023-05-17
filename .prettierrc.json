@@ -6,6 +6,6 @@
   "semi": true,
   "trailingComma": "all",
   "arrowParens": "always",
-  "jsxSingleQuote": true,
+  "jsxSingleQuote": false,
   "endOfLine": "auto"
 }
