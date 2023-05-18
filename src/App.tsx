@@ -3,7 +3,7 @@ import React from 'react';
 // mui
 import Button from '@mui/material/Button';
 
-import logo from './logo.svg';
+import logo from 'assets/logo.svg';
 import './App.css';
 
 function App() {
@@ -20,7 +20,9 @@ function App() {
         >
           Learn React
         </a>
-        <Button>Hello</Button>
+        <Button variant="contained" color="primary">
+          Hello
+        </Button>
       </header>
     </div>
   );

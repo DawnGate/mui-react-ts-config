@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
+
+// components custom
+import FullLoading from 'components/Loading/FullLoading';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 // mui config
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import theme from './config/theme';
+import theme from 'config/theme';
 
 // init app
 import './index.css';
@@ -18,7 +22,11 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <ErrorBoundary>
+        <Suspense fallback={<FullLoading />}>
+          <App />
+        </Suspense>
+      </ErrorBoundary>
     </ThemeProvider>
   </React.StrictMode>,
 );
