@@ -1,29 +1,16 @@
 import React from 'react';
 
-// mui
-import Button from '@mui/material/Button';
-
-import logo from 'assets/logo.svg';
+// styles
 import './App.css';
+
+// react-router
+import { RouterProvider } from 'react-router-dom';
+import routes from 'routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Edit and save to reload.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="contained" color="primary">
-          Hello
-        </Button>
-      </header>
+    <div>
+      <RouterProvider router={routes} />
     </div>
   );
 }
