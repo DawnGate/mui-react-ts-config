@@ -15,6 +15,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// mock
+
+/* eslint-disable global-require */
+
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { worker } = require('./mocks/browser');
+  worker.start();
+}
+
+/* eslint-enable global-require */
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
